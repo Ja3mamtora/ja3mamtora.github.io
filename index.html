@@ -6,40 +6,51 @@
         <title>Jatin Mamtora</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="stylesheet" href="./styles/main.css">
     </head>
     <body>
+        <script>
+            function toggleDescription(arrowIcon) {
+                const projectCard = arrowIcon.parentElement;
+                const projectDescription = projectCard.querySelector('.project-description');
+                const isHidden = projectDescription.style.display === 'none';
+    
+                projectDescription.style.display = isHidden ? 'block' : 'none';
+                arrowIcon.textContent = isHidden ? '▲' : '▼';
+            }
+        </script>
         <div id="container--main">
 
             <section id="wrapper--hero" class="section--page">
-                <img id="profile-pic" src="./assets/images/profile_pic.jpeg">
+                <img id="profile-pic" src="./assets/images/profile_pic.webp">
 
                 <div>
-                    <h1 id="user-name">Jatin Mamtora</h1>
-                    <p id="bio"><p>Full-Stack Web-Devloper, DSA-C++, Cloud Enthusiast</p>A sophomore year Computer Engineering Student from CHARUSAT with Proven Project Management skills and programming skills.</p>
-                    <p id="email">👉 jatinumamtora@gmail.com</p>
+                    <h1 id="user-name" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Jatin Mamtora</h1>
+                    <p id="bio"><p>Backend Developer, DSA-C++, Cloud Enthusiast</p>A Pre-Final year Computer Engineering Student from CHARUSAT with proven Project Management skills and Problem solving skills.Passionate about developing intricate web applications and designing databases.</p>
+                    <p id="email" >📧 <a href="mailto:jatinumamtora@gmail.com" style="color: white;"> jatinumamtora@gmail.com</a></p>
                 </div>  
             </section>
 
             <section class="section--page">
         
                 <div id="socials--list">
-                    <a href="https://twitter.com/JatinMamtora5" target="_blank">Twitter</a>
+                    <a href="https://leetcode.com/ja3/" target="_blank">LeetCode</a>
                     <a href="https://www.linkedin.com/in/jatin-mamtora-008811211/" target="_blank">Linkedin</a>
                     <a href="https://github.com/Ja3mamtora" target="_blank">Github</a>
-                    <a href="./assets/images/resume.pdf" target="_blank">Download Resume</a>
+                    <a href="./assets/resume.pdf" target="_blank">Download Resume</a>
                 </div>
             </section>
 
             <section class="section--page">
                 <h2>Acheivements</h2>
                 <ul id="qualifications--list">
-                    <li>🏆 Contributed in HacktoberFest'22 </li>
-                    <li>🏆 GFG 3rd place in College</li>
-                    <li>🏆 Twice Completed GCP 1st milestone</li>
-                    <li>🏆 Codechef 2 Star (1517: Best)</li>
-                    <li>🏆 275+ problems on LeetCode & 120+ problems on GFG</li>
-                    <li>🏆 Google WOC'23 Contibutor</li>
+                    <li>🏆 Leetcode rating of 1566 top 27%.</li>
+                    <li>🏆 1st place in GeeksforGeeks College chapter.</li>
+                    <li>🏆 Twice Completed GCP 1st milestone.</li>
+                    <li>🏆 Contibuted in GSSOC'23,GWoC'23,Hacktoberfest'23 & '22.</li>
+                    <li>🏆 650+ problems on LeetCode & 250+ problems on GFG</li>
+                    <li>🏆 GSSOC'23 Maintainer</li>
                 </ul>
             </section>
 
@@ -47,10 +58,10 @@
                 <h2>Tech stack</h2>
 
                 <div id="wrapper--techstack__items">
-                    <div class="card--techstack"><span>HTML, JavaScript, NodeJS</span></div>
-                    <div class="card--techstack"><span1> Express, Mongoose </span></div>
-                    <div class="card--techstack"><span>C, C++, DSA, Cloud-Computing</span></div>
-                    <div class="card--techstack"><span>MongoDB, MySQL</span></div>
+                    <div class="card--techstack"><span>HTML, JavaScript, NodeJS, TypeScript</span></div>
+                    <div class="card--techstack"><span> Express, Mongoose, Prisma, Sequelize </span></div>
+                    <div class="card--techstack"><span>C, C++, DSA, AWS</span></div>
+                    <div class="card--techstack"><span>MongoDB, MySQL, PostgreSql</span></div>
                 </div>
             </section>
 
@@ -58,24 +69,39 @@
                 <h2>Projects & Accomplishments</h2>
 
                 <div class="card--project">
-                    <a href="https://github.com/Ja3mamtora/personalBlogWebsite" target="_blank"><span></span>Personal BLog Website using NodeJS & MongoDB</a>
+                    <span></span>Exam Eye | TypeScript, WebRTC, NodeJs, Postgresql
+                    <div class="arrow-icon" onclick="toggleDescription(this)">▼</div>
+                    <div class="project-description">
+                        •ExamEye web based online exam taking tool with AI based proctoring and browser lockdown features,
+                        lowering cheating up to 97% and providing overall and individual exam report to admin, created in 6 member
+                        team.<br>
+                        •Contributed as backend developer utilizing TypeScript,Prisma and PostgreSql to achieve 20% faster data retrival.<br>
+                        • Implemented Dependency Injection and integrated Cloudinary for video & image storage by minimizing load
+                        up to 20% on db.
+                    </div>
                 </div>
 
                 <div class="card--project">
-                    <a href="https://github.com/Ja3mamtora/ToDo" target="_blank"><span></span>Simple To Do list with NodeJS and MongoDB</a>
+                    <span></span>Quotation Maker | NodeJs, ReactJs, Postgresql
+                    <div class="arrow-icon" onclick="toggleDescription(this)">▼</div>
+                    <div class="project-description">
+                        • Quotation Maker, a web application for creating quotations with unique feature of maintaining different
+                        versions of quotation saving 50% of average quote preparation time.<br>
+                        • Introduced feature to download quotation, Customer and Product list in PDF or CSV format in less than 1mb.<br>
+                        • Leveraged psql and Nodejs to build a scalabe database design and secured system with use of JWT
+                    </div>
                 </div>
 
                 <div class="card--project">
-                    <a href="https://github.com/Ja3mamtora/Weather-App" target="_blank"><span></span>Weather App using NodeJS & open-weather API</a>
+                    <span></span>Weather App using NodeJS & open-weather API
+                    <div class="arrow-icon" onclick="toggleDescription(this)">▼</div>
+                    <div class="project-description">
+                        • Developed used item auctioning API w/ Stripe integration Socket.io for real-time bidding, reducing storage costs
+                        30% via AWS S3-Bucket<br>
+                        • Maximized 30% more maintainability by applying SOLID principles with TS
+                    </div>
                 </div>
-
-                <div class="card--project">
-                    <a href="https://github.com/Ja3mamtora/SGP-Querious" target="_blank"><span></span>Querious: A begineer Friendly platform to ask tech questions </a>
-                </div>
-
             </section>
-
-       
         </div>
 
     </body>
